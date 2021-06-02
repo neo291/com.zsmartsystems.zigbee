@@ -683,6 +683,7 @@ public class CommandGenerator extends ClassGenerator {
             case "bool":
                 return "boolean";
             case "EmberNodeId":
+            case "EmberMulticastId":
             case "EmberCounterType":
             case "EmberGpSecurityFrameCounter":
             case "EzspDecisionBitmask":
@@ -815,6 +816,7 @@ public class CommandGenerator extends ClassGenerator {
             case "EmberGpSinkTableEntry":
             case "EmberBeaconData":
             case "EmberBeaconIterator":
+            case "EmberMulticastTableEntry":
                 addImport(ezspStructurePackage + "." + dataTypeLocal);
                 return dataTypeLocal + modifier;
             default:
@@ -834,6 +836,7 @@ public class CommandGenerator extends ClassGenerator {
                 return "UInt8";
             case "EzspDecisionBitmask":
             case "EmberNodeId":
+            case "EmberMulticastId":
             case "uint16_t":
                 return "UInt16";
             case "uint32_t":
@@ -887,6 +890,7 @@ public class CommandGenerator extends ClassGenerator {
             case "EmberGpSinkTableEntry":
             case "EmberBeaconData":
             case "EmberBeaconIterator":
+            case "EmberMulticastTableEntry":
                 return dataTypeLocal;
             default:
                 return dataType;

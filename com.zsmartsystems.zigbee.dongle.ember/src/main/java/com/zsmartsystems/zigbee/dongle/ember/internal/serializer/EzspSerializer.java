@@ -35,6 +35,7 @@ import com.zsmartsystems.zigbee.dongle.ember.ezsp.structure.EmberKeyData;
 import com.zsmartsystems.zigbee.dongle.ember.ezsp.structure.EmberKeyStructBitmask;
 import com.zsmartsystems.zigbee.dongle.ember.ezsp.structure.EmberKeyType;
 import com.zsmartsystems.zigbee.dongle.ember.ezsp.structure.EmberLibraryId;
+import com.zsmartsystems.zigbee.dongle.ember.ezsp.structure.EmberMulticastTableEntry;
 import com.zsmartsystems.zigbee.dongle.ember.ezsp.structure.EmberNetworkParameters;
 import com.zsmartsystems.zigbee.dongle.ember.ezsp.structure.EmberNodeType;
 import com.zsmartsystems.zigbee.dongle.ember.ezsp.structure.EmberOutgoingMessageType;
@@ -167,6 +168,10 @@ public class EzspSerializer {
 
     public void serializeEmberInitialSecurityState(EmberInitialSecurityState securityState) {
         securityState.serialize(this);
+    }
+
+    public void serializeEmberMulticastTableEntry(EmberMulticastTableEntry emberMulticastTableEntry) {
+        emberMulticastTableEntry.serialize(this);
     }
 
     public void serializeEmberOutgoingMessageType(EmberOutgoingMessageType messageType) {
